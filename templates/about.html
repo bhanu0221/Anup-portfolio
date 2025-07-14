@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    body {
+        background:url("{{ url_for('static', filename='images/about.jpg') }}") no-repeat center center;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+    }
+
+    .about-container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #e4f0fcc3;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(233, 230, 230, 0);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+
+    .about-container h2 {
+        color: #00796b;
+        margin-bottom: 15px;
+        font-size: 2rem;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+    }
+
+    .about-container h3 {
+        color: #00695c;
+        margin-top: 25px;
+        font-size: 1.4rem;
+    }
+
+    .about-container p {
+        line-height: 1.6;
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+    }
+
+    .about-container ul {
+        list-style-type: square;
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+
+    .about-container ul li {
+        margin-bottom: 8px;
+        font-size: 1.05rem;
+    }
+
+    @media (max-width: 768px) {
+        .about-container {
+            margin: 20px;
+            padding: 15px;
+        }
+
+        .about-container h2 {
+            font-size: 1.6rem;
+        }
+
+        .about-container h3 {
+            font-size: 1.2rem;
+        }
+
+        .about-container p,
+        .about-container ul li {
+            font-size: 1rem;
+        }
+    }
+
+    img:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<div class="about-container">
+    <h2>About Me</h2>
+    <p>
+        I'm Anup Shahi, a BCA student passionate about web development and Data analysts. I enjoy solving real-world
+        problems with code
+        and learning now currently working on various projects to enhance my skills.
+    </p>
+
+    <h3>Education</h3>
+    <ul>
+        <li>Bachelor of Computer Applications (BCA)</li>
+        <li>Doon Business School, Global University, Dehradun (Uttarakhand)</li>
+        <li>Graduation Year: 2022 - 2025</li>
+        <li>Expected CGPA: ~7.5</li>
+    </ul>
+
+    <h3>Intermediate Class 12</h3>
+    <ul>
+        <li>Holy Cross Sr. Sec School, Laksar, Haridwar</li>
+        <li>Board: CBSE</li>
+        <li>Completion Year: 2022</li>
+    </ul>
+
+    <h3>Technical Skills</h3>
+    <ul>
+        <li>Frontend: HTML, CSS, Basic JavaScript, Bootstrap, and basic Tailwind CSS</li>
+        <li>Backend: Python and Frameworks (Flask, pandas); currently learning Django</li>
+        <li>Database: MySQL, SQL, Firebase Firestore, and MongoDB</li>
+        <li>Tools: Git, Firebase (for auth), VS Code</li>
+        <li>Version Control: GitHub</li>
+        <li>Expert in using AI Tools and Technologies (ChatGPT, GitHub Copilot, BlackBox.AI etc.) for debugging and code
+            optimization</li>
+    </ul>
+
+    <h3>What I'm Currently Doing</h3>
+    <p>
+        I'm currently working on several projects to enhance my skills and build a portfolio.
+        I enjoy learning new technologies and applying them in practical scenarios.
+        My goal is to become a proficient web developer and also interested in data analytics and machine learning.
+        I am also exploring AI tools to improve my coding efficiency and problem-solving capabilities.
+    </p>
+
+    <h3>Certificates</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; padding: 20px;">
+
+        <div style="text-align: center; flex: 0 1 auto;">
+            <img src="{{ url_for('static', filename='images/python.png') }}" alt="Python Meta Certificate" width="200"
+                style="border-radius: 8px; box-shadow: 0 0 8px #ccc; margin-bottom: 10px;">
+            <p>Programming in Python, Meta</p>
+        </div>
+
+        <div style="text-align: center; flex: 0 1 auto;">
+            <img src="{{ url_for('static', filename='images/org.png') }}" alt="Organisational Design Certificate"
+                width="200" style="border-radius: 8px; box-shadow: 0 0 8px #ccc; margin-bottom: 10px;">
+            <p>Organisational Design - Macquarie</p>
+        </div>
+
+                <div style="text-align: center; flex: 0 1 auto;">
+            <img src="{{ url_for('static', filename='images/AI.png') }}" alt="Gen AI Certificate" width="200"
+                style="border-radius: 8px; box-shadow: 0 0 8px #ccc; margin-bottom: 10px;">
+            <p>Gen AI for Front-End Developers</p>
+
+        </div>
+
+                <div style="text-align: center; flex: 0 1 auto;">
+            <img src="{{ url_for('static', filename='images/sql.png') }}" alt="SQL Certificate" width="200"
+                style="border-radius: 8px; box-shadow: 0 0 8px #ccc; margin-bottom: 10px;">
+            <p>SQL and Relational Databases, IBM skills</p>
+        </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>My Memories</h1>
+<p>Here are some of my favorite memories and experiences:</p>
+
+<div class="gallery">
+    {% for image in images %}
+        <div class="memory-card">
+            <img src="{{ image }}" alt="Memory" loading="lazy">
+        </div>
+    {% endfor %}
+</div>
+
+<style>
+    h1, p {
+        text-align: center;
+        color: #00796b;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .memory-card {
+        background-color: #e0f7fa;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        width: 220px;
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .memory-card img {
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 💡 THIS makes all images fit the frame neatly */
+        border-radius: 8px;
+        transition: transform 0.2s;
+    }
+
+    .memory-card img:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+{% endblock %}
