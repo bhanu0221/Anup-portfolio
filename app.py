@@ -15,6 +15,10 @@ def about():
 def projects():
     return render_template('projects.html')
 
+@app.route('/feedback')
+def feedback():
+    return render_template('feedback.html')
+
 @app.route('/memories')
 def memories():
     image_folder = os.path.join(app.static_folder, 'images', 'memories')
